@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class EmployeeTestFile {
+
+	public static void main(String[] args) {
+			//this will import the scanner to print to a customer
+		Scanner in = new Scanner (System.in);
+		//This will prompt the user to enter the hiredate, salary, etc
+		System.out.println("Enter the salary");
+		double salary = in.nextDouble();
+		System.out.println("Enter the Indentification number, 6 digits");
+		String IdentificationNumber = in.next();
+		System.out.println("Enter the hire date MMDDYYYY without spaces");
+		int hireDate = in.nextInt();
+		System.out.println("Enter the address");
+		String street_Name = in.next();
+		System.out.println("Enter the City");
+		String City = in.next();
+		System.out.println("Enter the zip code, 5 digits only");
+		int Zipcode = in.nextInt();
+		System.out.println("Enter the state");
+		String State = in.next();
+		System.out.println("Is this your current address? Type True or False");
+		boolean CurrentAddress = in.nextBoolean();
+		 
+		
+		//This is the creation of the no args constructor for the employee test case
+		Employee employee1 = new Employee();
+		
+		employee1.setEmployeeSalary(salary);
+		employee1.address1.City = City;
+		employee1.setHireDate(hireDate);
+		employee1.setIdentificationNumber(IdentificationNumber);
+		employee1.address1.ZipCode = Zipcode;
+		employee1.address1.street_Name = street_Name;
+		employee1.address1.State = State;
+		
+		//This will print out the results to confirm the code is running
+		//it will aggregate all of the strings and ints properly
+		System.out.println("Your Salary is " + employee1.getEmployeeSalary());
+		System.out.println("Your street name is " + employee1.address1.street_Name);
+		System.out.println("Your hire date is " + employee1.getHireDate());
+		System.out.println("Your zipcode is " + employee1.address1.ZipCode);
+		System.out.println("Your City is " + employee1.address1.City);
+		System.out.println("Your State is " + employee1.address1.State);
+		System.out.println("Your Identification Number is " + employee1.getIdentificationNumber());
+		System.out.println("This is your address, T or F" + employee1.address1.isCurrentAddress);
+			}
+}
