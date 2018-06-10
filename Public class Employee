@@ -1,0 +1,47 @@
+public class Employee extends Person{
+		
+		        String name = "Rikki";
+		        int hireDate = 2015;
+		        Double employeeSalary = (double) 49000;
+		        String IdentificationNumber = "123456";
+		        Address address1;
+		        
+		       public Employee() {
+		    	   address1 = new Address();
+		       }
+		        
+				public String getName() {
+					return name;
+				}
+				public void setName(String name) {
+					this.name = name;
+				}
+				public int getHireDate() {
+					return hireDate;
+				}
+				public void setHireDate(int hireDate) {
+					this.hireDate = hireDate;
+				}
+				public Double getEmployeeSalary() {
+					return employeeSalary;
+				}
+				public void setEmployeeSalary(Double employeeSalary) {
+					this.employeeSalary = employeeSalary;
+				}
+				public String getIdentificationNumber() {
+					return IdentificationNumber;
+				}
+				public void setIdentificationNumber(String identificationNumber) {
+					IdentificationNumber = identificationNumber;
+				} 
+		        
+		    class Address{ 
+				String street_Name = "Street Number";
+				String City = "City Name";
+				int ZipCode = 55408;
+				String State = "Minnesota";
+				boolean isCurrentAddress = false;
+			
+	      }
+				}
+
